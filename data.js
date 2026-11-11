@@ -1,0 +1,1555 @@
+window.APP_DATA = {
+  "app": "Marʉkwe",
+  "language": "Comanche (Nʉmʉ Tekwapʉ̲)",
+  "lexicon": [
+    {
+      "id": 1,
+      "comanche": "Kwiʔnai",
+      "spanish": "Águila",
+      "category": "Animales",
+      "image": "images/aguila_nobg.png",
+      "audio": null,
+      "notes": "también se tiene \"Suluma\" como palabra registrada para águila, considero que requiere discusión."
+    },
+    {
+      "id": 2,
+      "comanche": "Wokowi",
+      "spanish": "Ardilla",
+      "category": "Animales",
+      "image": "images/ardilla_nobg.png",
+      "audio": null,
+      "notes": "Agregaría: \"Malon\":Juancito. Ardilla Cola-redonda. (desert) Round-tail squirrel. El juancito es un tipo de ardilla de cola redonda que habita en el desierto."
+    },
+    {
+      "id": 3,
+      "comanche": "Kabʉrʉʉ",
+      "spanish": "Borrego",
+      "category": "Animales",
+      "image": "images/borrego_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "comanche": "Kutziwobi",
+      "spanish": "Burro",
+      "category": "Animales",
+      "image": "images/burro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "comanche": "Puhu",
+      "spanish": "Caballo doméstico",
+      "category": "Animales",
+      "image": "images/caballo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "comanche": "Mubi pooro",
+      "spanish": "Cerdo",
+      "category": "Animales",
+      "image": "images/cerdo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "comanche": "Chibo",
+      "spanish": "Chivito",
+      "category": "Animales",
+      "image": "images/chivito_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "comanche": "Tabu",
+      "spanish": "Conejo",
+      "category": "Animales",
+      "image": "images/conejo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "comanche": "Kʉhkwʉria",
+      "spanish": "Coyote",
+      "category": "Animales",
+      "image": "images/coyote_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "comanche": "Kokora",
+      "spanish": "Gallina",
+      "category": "Animales",
+      "image": "images/gallina_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 11,
+      "comanche": "Waʔoo",
+      "spanish": "Gato",
+      "category": "Animales",
+      "image": "images/gato_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 12,
+      "comanche": "Woʔaabi",
+      "spanish": "Gusano",
+      "category": "Animales",
+      "image": "images/gusano_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 13,
+      "comanche": "Aniikura",
+      "spanish": "Hormiga",
+      "category": "Animales",
+      "image": "images/hormiga_nobg.png",
+      "audio": null,
+      "notes": "eesuki (hormiguita);  basu'uchi (termita); jo'oboe (hormiga negra); soto'oli (hormiga velluda);"
+    },
+    {
+      "id": 14,
+      "comanche": "Pabooki",
+      "spanish": "Lagartija",
+      "category": "Animales",
+      "image": "images/lagartija_nobg.png",
+      "audio": null,
+      "notes": "wikuim (huico, cuija), kama (caimán, cocodrilo, gavial), porowim (porogüi,porohui, lagarto,cachora), aakame (cascabel), aakamnakapit (cascabel sorda), ala'amai (víbora cornuda), baakot (culebra), sakkaom (monstruo de gila), chupiari (camaleón), motcho'okol (lagarto cornudo, camaleón), wa'ibil (tortuga terrestre), majau (tortuga de río), mochik (tortuga del desierto), mosen (tortuga de mar, caguama)\n—Necesita discusión o diversificación de entradas."
+    },
+    {
+      "id": 15,
+      "comanche": "Weʔyakoroo",
+      "spanish": "Mariposa",
+      "category": "Animales",
+      "image": "images/mariposa_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 16,
+      "comanche": "Animuʔi",
+      "spanish": "Mosca",
+      "category": "Animales",
+      "image": "images/mosca_nobg.png",
+      "audio": null,
+      "notes": "baikumareewi (libélula)"
+    },
+    {
+      "id": 17,
+      "comanche": "Parʉka",
+      "spanish": "Oso",
+      "category": "Animales",
+      "image": "images/oso_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 18,
+      "comanche": "Sarii",
+      "spanish": "Perro",
+      "category": "Animales",
+      "image": "images/perro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 19,
+      "comanche": "Pekwi",
+      "spanish": "Pez",
+      "category": "Animales",
+      "image": "images/pez_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 20,
+      "comanche": "Huutzu",
+      "spanish": "Pájaro",
+      "category": "Animales",
+      "image": "images/pajaro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 21,
+      "comanche": "Kahúu",
+      "spanish": "Ratón",
+      "category": "Animales",
+      "image": "images/raton_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 22,
+      "comanche": "Tʉbini",
+      "spanish": "Sapo",
+      "category": "Animales",
+      "image": "images/sapo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 23,
+      "comanche": "Kwasinaboo",
+      "spanish": "Serpiente",
+      "category": "Animales",
+      "image": "images/serpiente_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 24,
+      "comanche": "Pimoroo",
+      "spanish": "Vaca",
+      "category": "Animales",
+      "image": "images/vaca_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 25,
+      "comanche": "Arʉka",
+      "spanish": "Venado",
+      "category": "Animales",
+      "image": "images/venado_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 26,
+      "comanche": "Pisunii",
+      "spanish": "Zorrillo",
+      "category": "Animales",
+      "image": "images/zorrillo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 27,
+      "comanche": "Waʔni",
+      "spanish": "Zorro",
+      "category": "Animales",
+      "image": "images/zorro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 28,
+      "comanche": "Wakarʉʉ",
+      "spanish": "Tortuga",
+      "category": "Animales",
+      "image": "images/tortuga_nobg.png",
+      "audio": null,
+      "notes": "Mismas obs. que en ID=14 (notas). Considero que necesita discusión profunda."
+    },
+    {
+      "id": 29,
+      "comanche": "pʉʉyu",
+      "spanish": "Pato",
+      "category": "Animales",
+      "image": "images/pato_nobg.png",
+      "audio": null,
+      "notes": "agua+cuervo."
+    },
+    {
+      "id": 30,
+      "comanche": "Kwasi Tona",
+      "spanish": "Alacrán",
+      "category": "Animales",
+      "image": "images/alacran_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 31,
+      "comanche": "Huupi",
+      "spanish": "Árbol",
+      "category": "Naturaleza",
+      "image": "images/arbol_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 32,
+      "comanche": "Pisi matokóo",
+      "spanish": "Arcoíris",
+      "category": "Naturaleza",
+      "image": "images/arcoiris_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 33,
+      "comanche": "Parawʉtʉ̲",
+      "spanish": "Barranca",
+      "category": "Naturaleza",
+      "image": "images/barranca_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 34,
+      "comanche": "Taainʉ",
+      "spanish": "Cueva",
+      "category": "Naturaleza",
+      "image": "images/cueva_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 35,
+      "comanche": "Tachinupi",
+      "spanish": "Estrella",
+      "category": "Naturaleza",
+      "image": "images/estrella_nobg.png",
+      "audio": null,
+      "notes": "añadir: \"bawe choki\"= estrella de mar;"
+    },
+    {
+      "id": 36,
+      "comanche": "Tochiya",
+      "spanish": "Flor",
+      "category": "Naturaleza",
+      "image": "images/flor_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 37,
+      "comanche": "Kohtoo",
+      "spanish": "Fuego",
+      "category": "Naturaleza",
+      "image": "images/fuego_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 38,
+      "comanche": "Puhipʉ̲",
+      "spanish": "Hoja",
+      "category": "Naturaleza",
+      "image": "images/hoja_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 39,
+      "comanche": "Pasawiʔooʔa hukiʔai",
+      "spanish": "Hongo",
+      "category": "Naturaleza",
+      "image": "images/hongo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 40,
+      "comanche": "Ʉmarʉ",
+      "spanish": "Lluvia",
+      "category": "Naturaleza",
+      "image": "images/lluvia_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 41,
+      "comanche": "Mʉa",
+      "spanish": "Luna",
+      "category": "Naturaleza",
+      "image": "images/luna_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 42,
+      "comanche": "parʉtzopʉ̲",
+      "spanish": "Manantial",
+      "category": "Naturaleza",
+      "image": "images/manantial_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 43,
+      "comanche": "Pia paa",
+      "spanish": "Mar",
+      "category": "Naturaleza",
+      "image": "images/mar_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 44,
+      "comanche": "Pia tooyabi",
+      "spanish": "Monte",
+      "category": "Naturaleza",
+      "image": "images/monte_nobg.png",
+      "audio": null,
+      "notes": "Para referirse a la tierra rústica o despoblado se le refiere como \"juya\", p. 66;"
+    },
+    {
+      "id": 45,
+      "comanche": "Tahkabi",
+      "spanish": "Nieve",
+      "category": "Naturaleza",
+      "image": "images/nieve_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 46,
+      "comanche": "Wokweesi",
+      "spanish": "Nopal",
+      "category": "Naturaleza",
+      "image": "images/nopal_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 47,
+      "comanche": "Tomobi",
+      "spanish": "Nube",
+      "category": "Naturaleza",
+      "image": "images/nube_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 48,
+      "comanche": "Tʉpi",
+      "spanish": "Piedra",
+      "category": "Naturaleza",
+      "image": "images/piedra_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 49,
+      "comanche": "MooKa",
+      "spanish": "Rama",
+      "category": "Naturaleza",
+      "image": "images/rama_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 50,
+      "comanche": "tʉrana",
+      "spanish": "Raíz",
+      "category": "Naturaleza",
+      "image": "images/raiz_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 51,
+      "comanche": "Hunubi",
+      "spanish": "Río",
+      "category": "Naturaleza",
+      "image": "images/rio_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 52,
+      "comanche": "Taabe",
+      "spanish": "Sol",
+      "category": "Naturaleza",
+      "image": "images/sol_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 53,
+      "comanche": "Sokobi",
+      "spanish": "Tierra",
+      "category": "Naturaleza",
+      "image": "images/tierra_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 54,
+      "comanche": "Tomoyaketʉ̲",
+      "spanish": "Trueno",
+      "category": "Naturaleza",
+      "image": "images/trueno_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 55,
+      "comanche": "Nʉetʉ",
+      "spanish": "Viento",
+      "category": "Naturaleza",
+      "image": "images/viento_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 56,
+      "comanche": "Pia Wokweebi",
+      "spanish": "Sahuaro",
+      "category": "Naturaleza",
+      "image": "images/sahuaro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 57,
+      "comanche": "Paa",
+      "spanish": "Agua",
+      "category": "Comida y bebida",
+      "image": "images/agua_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 58,
+      "comanche": "Kahtzaapʉ̲",
+      "spanish": "Atole",
+      "category": "Comida y bebida",
+      "image": "images/atole_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 59,
+      "comanche": "Paʔsa ponii",
+      "spanish": "Bellota",
+      "category": "Comida y bebida",
+      "image": "images/bellota_nobg.png",
+      "audio": null,
+      "notes": "Nuez: mochiktaaka. Taaka es sustantivo de fruto. Hipotéticamente sería el [árbol de bellota] + taaka; No se tiene registro de palabra correspondiente a \"bellota\""
+    },
+    {
+      "id": 60,
+      "comanche": "Huba",
+      "spanish": "Café",
+      "category": "Comida y bebida",
+      "image": "images/cafe_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 61,
+      "comanche": "nakwi̱si",
+      "spanish": "Calabaza",
+      "category": "Comida y bebida",
+      "image": "images/calabaza_nobg.png",
+      "audio": null,
+      "notes": "También aparecen \"Arokosi\" en la p. 34 y kama en la p. 71."
+    },
+    {
+      "id": 62,
+      "comanche": "Tʉhkapʉ̲",
+      "spanish": "Carne",
+      "category": "Comida y bebida",
+      "image": "images/carne_nobg.png",
+      "audio": null,
+      "notes": "También se usa esta palabra para referirse a \"pulpa\" (parte carnosa de una fruta)."
+    },
+    {
+      "id": 63,
+      "comanche": "Siiko",
+      "spanish": "Cereza",
+      "category": "Comida y bebida",
+      "image": "images/cereza_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 64,
+      "comanche": "Chira",
+      "spanish": "Chile",
+      "category": "Comida y bebida",
+      "image": "images/chile_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 65,
+      "comanche": "pihúura",
+      "spanish": "Frijol",
+      "category": "Comida y bebida",
+      "image": "images/frijol_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 66,
+      "comanche": "Naayo",
+      "spanish": "Huevo",
+      "category": "Comida y bebida",
+      "image": "images/huevo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 67,
+      "comanche": "pitzipʉ̲",
+      "spanish": "Leche",
+      "category": "Comida y bebida",
+      "image": "images/leche_nobg.png",
+      "audio": null,
+      "notes": "También \"kauwam\"."
+    },
+    {
+      "id": 68,
+      "comanche": "Amawo",
+      "spanish": "Manzana",
+      "category": "Comida y bebida",
+      "image": "images/manzana_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 69,
+      "comanche": "Hanibi",
+      "spanish": "Maíz",
+      "category": "Comida y bebida",
+      "image": "images/maiz_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 70,
+      "comanche": "Nokopʉ̲",
+      "spanish": "Pan",
+      "category": "Comida y bebida",
+      "image": "images/pan_nobg.png",
+      "audio": null,
+      "notes": "también paanim;"
+    },
+    {
+      "id": 71,
+      "comanche": "Papasi̱",
+      "spanish": "Papa",
+      "category": "Comida y bebida",
+      "image": "images/papa_nobg.png",
+      "audio": null,
+      "notes": "también paapa;"
+    },
+    {
+      "id": 72,
+      "comanche": "pihnarʉsupʉ̲",
+      "spanish": "Pinole",
+      "category": "Comida y bebida",
+      "image": "images/pinole_nobg.png",
+      "audio": null,
+      "notes": "también saktusi;"
+    },
+    {
+      "id": 73,
+      "comanche": "Pukurʉhkapʉ̲",
+      "spanish": "Quelite",
+      "category": "Comida y bebida",
+      "image": "images/quelite_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 74,
+      "comanche": "Onabi",
+      "spanish": "Sal",
+      "category": "Comida y bebida",
+      "image": "images/sal_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 75,
+      "comanche": "Bakoʔahanibi",
+      "spanish": "Tesgüino",
+      "category": "Comida y bebida",
+      "image": "images/tesguino_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 76,
+      "comanche": "Tohtiya",
+      "spanish": "Tortilla",
+      "category": "Comida y bebida",
+      "image": "images/tortilla_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 77,
+      "comanche": "tohtía masʉa",
+      "spanish": "Trigo",
+      "category": "Comida y bebida",
+      "image": "images/trigo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 78,
+      "comanche": "tzitara pokobi",
+      "spanish": "Pitahaya",
+      "category": "Comida y bebida",
+      "image": "images/pitahaya_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 79,
+      "comanche": "Tamabi",
+      "spanish": "Tamal",
+      "category": "Comida y bebida",
+      "image": "images/tamal_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 80,
+      "comanche": "Saʔhuʔba",
+      "spanish": "Caldo",
+      "category": "Comida y bebida",
+      "image": "images/caldo_nobg.png",
+      "audio": null,
+      "notes": "también ba'awa"
+    },
+    {
+      "id": 81,
+      "comanche": "Natzihtóo",
+      "spanish": "Bastón (de caña)",
+      "category": "Objetos y hogar",
+      "image": "images/baston_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 82,
+      "comanche": "Woosa",
+      "spanish": "Bolsa",
+      "category": "Objetos y hogar",
+      "image": "images/bolsa_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 83,
+      "comanche": "Kahpe",
+      "spanish": "Cama",
+      "category": "Objetos y hogar",
+      "image": "images/cama_nobg.png",
+      "audio": null,
+      "notes": "también jipeku'um;"
+    },
+    {
+      "id": 84,
+      "comanche": "Sʉhʉ aawo",
+      "spanish": "Cesta",
+      "category": "Objetos y hogar",
+      "image": "images/cesta_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 85,
+      "comanche": "Esawana",
+      "spanish": "Cobija",
+      "category": "Objetos y hogar",
+      "image": "images/cobija_nobg.png",
+      "audio": null,
+      "notes": "también bwepiisam = cobertor;"
+    },
+    {
+      "id": 86,
+      "comanche": "Kumari",
+      "spanish": "Comal",
+      "category": "Objetos y hogar",
+      "image": "images/comal_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 87,
+      "comanche": "Nahyu",
+      "spanish": "Cuchillo",
+      "category": "Objetos y hogar",
+      "image": "images/cuchillo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 88,
+      "comanche": "Wiʔyaa",
+      "spanish": "Cuerda",
+      "category": "Objetos y hogar",
+      "image": "images/cuerda_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 89,
+      "comanche": "tʉnua",
+      "spanish": "Escoba",
+      "category": "Objetos y hogar",
+      "image": "images/escoba_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 90,
+      "comanche": "tʉʉkaʔa",
+      "spanish": "Hacha",
+      "category": "Objetos y hogar",
+      "image": "images/hacha_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 91,
+      "comanche": "otʉʔpaʔwo",
+      "spanish": "Jarro",
+      "category": "Objetos y hogar",
+      "image": "images/jarro_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 92,
+      "comanche": "konoopʉ̲",
+      "spanish": "Leña",
+      "category": "Objetos y hogar",
+      "image": "images/lena_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 93,
+      "comanche": "tʉboohi",
+      "spanish": "Papel",
+      "category": "Objetos y hogar",
+      "image": "images/papel_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 94,
+      "comanche": "Naasoopee",
+      "spanish": "Pelota",
+      "category": "Objetos y hogar",
+      "image": "images/pelota_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 95,
+      "comanche": "Natzahwi",
+      "spanish": "Puerta",
+      "category": "Objetos y hogar",
+      "image": "images/puerta_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 96,
+      "comanche": "Nakarʉ",
+      "spanish": "Silla",
+      "category": "Objetos y hogar",
+      "image": "images/silla_nobg.png",
+      "audio": null,
+      "notes": "también banko, y jooria."
+    },
+    {
+      "id": 97,
+      "comanche": "Koa",
+      "spanish": "Tijera",
+      "category": "Objetos y hogar",
+      "image": "images/tijera_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 98,
+      "comanche": "tʉsoyuni",
+      "spanish": "Metate",
+      "category": "Objetos y hogar",
+      "image": "images/metate_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 99,
+      "comanche": "anarʉka",
+      "spanish": "Bule",
+      "category": "Objetos y hogar",
+      "image": "images/bule_nobg.png",
+      "audio": null,
+      "notes": "también arokosi."
+    },
+    {
+      "id": 100,
+      "comanche": "jipetam",
+      "spanish": "Petate",
+      "category": "Objetos y hogar",
+      "image": "images/petate_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 101,
+      "comanche": "Tepʉ̲",
+      "spanish": "Boca",
+      "category": "Partes del cuerpo",
+      "image": "images/boca_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 102,
+      "comanche": "Opihi̱",
+      "spanish": "Corazón",
+      "category": "Partes del cuerpo",
+      "image": "images/corazon_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 103,
+      "comanche": "Tʉʉno",
+      "spanish": "Espalda",
+      "category": "Partes del cuerpo",
+      "image": "images/espalda_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 104,
+      "comanche": "eeko",
+      "spanish": "Lengua",
+      "category": "Partes del cuerpo",
+      "image": "images/lengua_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 105,
+      "comanche": "Moʔo",
+      "spanish": "Mano",
+      "category": "Partes del cuerpo",
+      "image": "images/mano_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 106,
+      "comanche": "Mubi",
+      "spanish": "Nariz",
+      "category": "Partes del cuerpo",
+      "image": "images/nariz_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 107,
+      "comanche": "Sinapʉ̲",
+      "spanish": "Oído",
+      "category": "Partes del cuerpo",
+      "image": "images/oido_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 108,
+      "comanche": "Pui",
+      "spanish": "Ojos",
+      "category": "Partes del cuerpo",
+      "image": "images/ojos_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 109,
+      "comanche": "Nape",
+      "spanish": "Pie",
+      "category": "Partes del cuerpo",
+      "image": "images/pie_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 110,
+      "comanche": "Pʉʉpi",
+      "spanish": "Sangre",
+      "category": "Partes del cuerpo",
+      "image": "images/sangre_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 111,
+      "comanche": "tzaamanʉsuarʉ",
+      "spanish": "Alegre",
+      "category": "Adjetivos",
+      "image": "images/alegre_nobg.png",
+      "audio": null,
+      "notes": "también ache’ela."
+    },
+    {
+      "id": 112,
+      "comanche": "kʉbʉraata̱",
+      "spanish": "Alto",
+      "category": "Adjetivos",
+      "image": "images/alto_nobg.png",
+      "audio": null,
+      "notes": "también teebe (largo);"
+    },
+    {
+      "id": 113,
+      "comanche": "Ohapi̱tʉ̲",
+      "spanish": "Amarillo",
+      "category": "Adjetivos",
+      "image": "images/amarillo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 114,
+      "comanche": "Ebibitʉ̲",
+      "spanish": "Azul",
+      "category": "Adjetivos",
+      "image": "images/azul_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 115,
+      "comanche": "Toosapi̱tʉ̲",
+      "spanish": "Blanco",
+      "category": "Adjetivos",
+      "image": "images/blanco_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 116,
+      "comanche": "Nanitza",
+      "spanish": "Bonito",
+      "category": "Adjetivos",
+      "image": "images/bonito_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 117,
+      "comanche": "Ʉrʉ",
+      "spanish": "Caliente",
+      "category": "Adjetivos",
+      "image": "images/caliente_nobg.png",
+      "audio": null,
+      "notes": ": suka/taka/yosi; suka (tibio), tata (cálido), yosi (caliente)"
+    },
+    {
+      "id": 118,
+      "comanche": "Paʔitʉchi̱",
+      "spanish": "Chaparro",
+      "category": "Adjetivos",
+      "image": "images/chaparro_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 96"
+    },
+    {
+      "id": 119,
+      "comanche": "Ayo",
+      "spanish": "Feo",
+      "category": "Adjetivos",
+      "image": "images/feo_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 87"
+    },
+    {
+      "id": 120,
+      "comanche": "ʉchʉ",
+      "spanish": "Frío",
+      "category": "Adjetivos",
+      "image": "images/frio_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 132"
+    },
+    {
+      "id": 121,
+      "comanche": "Yuupʉ",
+      "spanish": "Gordo",
+      "category": "Adjetivos",
+      "image": "images/gordo_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 41"
+    },
+    {
+      "id": 122,
+      "comanche": "Ekaʔebibitʉ̲",
+      "spanish": "Morado",
+      "category": "Adjetivos",
+      "image": "images/morado_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 188"
+    },
+    {
+      "id": 123,
+      "comanche": "Tuhupitʉ̲",
+      "spanish": "Negro",
+      "category": "Adjetivos",
+      "image": "images/negro_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 62"
+    },
+    {
+      "id": 124,
+      "comanche": "Ekapitʉ̲",
+      "spanish": "Rojo",
+      "category": "Adjetivos",
+      "image": "images/rojo_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 136"
+    },
+    {
+      "id": 125,
+      "comanche": "tabʉikatʉ̲",
+      "spanish": "Triste",
+      "category": "Adjetivos",
+      "image": "images/triste_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 129"
+    },
+    {
+      "id": 126,
+      "comanche": "Puhipitʉ̲",
+      "spanish": "Verde",
+      "category": "Adjetivos",
+      "image": "images/verde_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 135"
+    },
+    {
+      "id": 127,
+      "comanche": "Otʉpitʉ̲",
+      "spanish": "Café",
+      "category": "Adjetivos",
+      "image": "images/cafe_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 90"
+    },
+    {
+      "id": 128,
+      "comanche": "kwasʉrʉ",
+      "spanish": "Cocinar",
+      "category": "Verbos",
+      "image": "images/cocinar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 43"
+    },
+    {
+      "id": 129,
+      "comanche": "Tʉhkarʉ",
+      "spanish": "Comer",
+      "category": "Verbos",
+      "image": "images/comer_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 54"
+    },
+    {
+      "id": 130,
+      "comanche": "Tʉmʉrʉ",
+      "spanish": "Comerciar",
+      "category": "Verbos",
+      "image": "images/comerciar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 79"
+    },
+    {
+      "id": 131,
+      "comanche": "ʉpʉitʉ̲",
+      "spanish": "Dormir",
+      "category": "Verbos",
+      "image": "images/dormir_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 95"
+    },
+    {
+      "id": 132,
+      "comanche": "Naboorʉ̲",
+      "spanish": "Escribir",
+      "category": "Verbos",
+      "image": "images/escribir_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 76"
+    },
+    {
+      "id": 133,
+      "comanche": "naakatʉ̲",
+      "spanish": "Habitar",
+      "category": "Verbos",
+      "image": "images/habitar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 77"
+    },
+    {
+      "id": 134,
+      "comanche": "Rʉkwarʉ",
+      "spanish": "Hablar",
+      "category": "Verbos",
+      "image": "images/hablar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 66"
+    },
+    {
+      "id": 135,
+      "comanche": "Naakitʉ̲",
+      "spanish": "Oír",
+      "category": "Verbos",
+      "image": "images/oir_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 79"
+    },
+    {
+      "id": 136,
+      "comanche": "Tʉrʉʔaitʉ̲",
+      "spanish": "Trabajar",
+      "category": "Verbos",
+      "image": "images/trabajar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 145"
+    },
+    {
+      "id": 137,
+      "comanche": "Punitʉ̲",
+      "spanish": "Ver",
+      "category": "Verbos",
+      "image": "images/ver_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 50"
+    },
+    {
+      "id": 138,
+      "comanche": "Chukuhpuʔa",
+      "spanish": "Viejito",
+      "category": "Personas",
+      "image": "images/viejito_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 163"
+    },
+    {
+      "id": 139,
+      "comanche": "Onaa",
+      "spanish": "Bebé",
+      "category": "Personas",
+      "image": "images/bebe_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 69"
+    },
+    {
+      "id": 140,
+      "comanche": "Natsu taibo",
+      "spanish": "Doctor",
+      "category": "Personas",
+      "image": "images/doctor_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 162"
+    },
+    {
+      "id": 141,
+      "comanche": "Kuma",
+      "spanish": "Hombre",
+      "category": "Personas",
+      "image": "images/hombre_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 119"
+    },
+    {
+      "id": 142,
+      "comanche": "tʉbooʔwapi̱",
+      "spanish": "Maestro",
+      "category": "Personas",
+      "image": "images/maestro_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 104"
+    },
+    {
+      "id": 143,
+      "comanche": "Kwaihpa",
+      "spanish": "Mujer",
+      "category": "Personas",
+      "image": "images/mujer_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 74"
+    },
+    {
+      "id": 144,
+      "comanche": "Muyakeʔetʉʔa",
+      "spanish": "Músico",
+      "category": "Personas",
+      "image": "images/musico_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 80"
+    },
+    {
+      "id": 145,
+      "comanche": "Naiʔbi",
+      "spanish": "Niña",
+      "category": "Personas",
+      "image": "images/nina_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 69"
+    },
+    {
+      "id": 146,
+      "comanche": "tuinʉhpʉ",
+      "spanish": "Niño",
+      "category": "Personas",
+      "image": "images/nino_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 154"
+    },
+    {
+      "id": 147,
+      "comanche": "hʉʉbiʔa",
+      "spanish": "Viejita",
+      "category": "Personas",
+      "image": "images/viejita_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 40"
+    },
+    {
+      "id": 148,
+      "comanche": "Naki̱tzoʔnika",
+      "spanish": "Aretes",
+      "category": "Vestimenta",
+      "image": "images/aretes_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 128"
+    },
+    {
+      "id": 149,
+      "comanche": "Chokwʉ̲kʉʉna",
+      "spanish": "Bandana",
+      "category": "Vestimenta",
+      "image": "images/bandana_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 53"
+    },
+    {
+      "id": 150,
+      "comanche": "Kwasu",
+      "spanish": "Blusa",
+      "category": "Vestimenta",
+      "image": "images/blusa_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 139"
+    },
+    {
+      "id": 151,
+      "comanche": "Kwasu",
+      "spanish": "Camisa",
+      "category": "Vestimenta",
+      "image": "images/camisa_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 139"
+    },
+    {
+      "id": 152,
+      "comanche": "Koyarʉ",
+      "spanish": "Collar",
+      "category": "Vestimenta",
+      "image": "images/collar_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 96"
+    },
+    {
+      "id": 153,
+      "comanche": "napʉ̲koʔi",
+      "spanish": "Faja",
+      "category": "Vestimenta",
+      "image": "images/faja_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 154,
+      "comanche": "Pihiboa",
+      "spanish": "Falda",
+      "category": "Vestimenta",
+      "image": "images/falda_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 93"
+    },
+    {
+      "id": 155,
+      "comanche": "Saaʔwʉ napʉ / Waraatsi",
+      "spanish": "Huarache",
+      "category": "Vestimenta",
+      "image": "images/huarache_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 47"
+    },
+    {
+      "id": 156,
+      "comanche": "Pitzoko",
+      "spanish": "Pantalones",
+      "category": "Vestimenta",
+      "image": "images/pantalones_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 131"
+    },
+    {
+      "id": 157,
+      "comanche": "Choʔnika",
+      "spanish": "Sombrero",
+      "category": "Vestimenta",
+      "image": "images/sombrero_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 108"
+    },
+    {
+      "id": 158,
+      "comanche": "Chaʔnika / kohinehki",
+      "spanish": "Taparrabo",
+      "category": "Vestimenta",
+      "image": "images/taparrabo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 159,
+      "comanche": "Kahni",
+      "spanish": "Casa",
+      "category": "Lugares",
+      "image": "images/casa_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 82"
+    },
+    {
+      "id": 160,
+      "comanche": "Pʉka sokobʉ",
+      "spanish": "Cementerio",
+      "category": "Lugares",
+      "image": "images/cementerio_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 83"
+    },
+    {
+      "id": 161,
+      "comanche": "Sookahni",
+      "spanish": "Ciudad",
+      "category": "Lugares",
+      "image": "images/ciudad_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 43"
+    },
+    {
+      "id": 162,
+      "comanche": "Kemabakahni",
+      "spanish": "Escuela",
+      "category": "Lugares",
+      "image": "images/escuela_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 64"
+    },
+    {
+      "id": 163,
+      "comanche": "Humasʉapʉ / pokopi masʉapʉ",
+      "spanish": "Huerta",
+      "category": "Lugares",
+      "image": "images/huerta_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 112"
+    },
+    {
+      "id": 164,
+      "comanche": "Puhakahni",
+      "spanish": "Iglesia",
+      "category": "Lugares",
+      "image": "images/iglesia_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 144"
+    },
+    {
+      "id": 165,
+      "comanche": "Rani̱cho sookahni",
+      "spanish": "Pueblo",
+      "category": "Lugares",
+      "image": "images/pueblo_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 126"
+    },
+    {
+      "id": 166,
+      "comanche": "Tʉmʉkahni",
+      "spanish": "Tienda",
+      "category": "Lugares",
+      "image": "images/tienda_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 88"
+    },
+    {
+      "id": 167,
+      "comanche": "Tukani",
+      "spanish": "Noche",
+      "category": "Naturaleza",
+      "image": "images/noche_nobg.png",
+      "audio": null,
+      "notes": "Diccionario p. 151"
+    },
+    {
+      "id": 168,
+      "comanche": "Kuhtzu tʉbini",
+      "spanish": "Sapo toro",
+      "category": "Animales",
+      "image": "images/sapo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 169,
+      "comanche": "nuhye",
+      "spanish": "Culebra",
+      "category": "Animales",
+      "image": "images/serpiente_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 170,
+      "comanche": "Kobe",
+      "spanish": "Caballo salvaje",
+      "category": "Animales",
+      "image": "images/caballo_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 171,
+      "comanche": "Sʉhʉ kahpe",
+      "spanish": "Petate",
+      "category": "Objetos y hogar",
+      "image": "images/petate_nobg.png",
+      "audio": null,
+      "notes": ""
+    },
+    {
+      "id": 172,
+      "comanche": "Kohinehki",
+      "spanish": "Taparrabos (largo o de tela)",
+      "category": "Vestimenta",
+      "image": "images/taparrabo_nobg.png",
+      "audio": null,
+      "notes": ""
+    }
+  ],
+  "phrases": []
+};

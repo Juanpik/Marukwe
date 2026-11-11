@@ -1,0 +1,15 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and test files
+*.tmp
+*.temp
+*~
+test_*.html
+inspect_*.html
+
+# Node / Editor
+.vscode/
+.idea/
