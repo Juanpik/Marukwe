@@ -2722,6 +2722,25 @@ body::before {
   margin-bottom: 12px;
 }
 
+.about-contact-row {
+  margin-top: 14px;
+  font-size: calc(0.95rem - 1px);
+  color: var(--carbon-secundario);
+  line-height: 1.5;
+}
+
+.about-contact-link {
+  color: var(--azul-comanche);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.about-contact-link:hover {
+  color: var(--azul-vibrante);
+}
+
 /* =========================================================
    PIE DE P?GINA Y LOGOS INSTITUCIONALES
    ========================================================= */

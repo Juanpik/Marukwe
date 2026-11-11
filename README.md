@@ -6,9 +6,9 @@
 
 ## 📖 Acerca del Proyecto
 
-**Marʉkwe** es una aplicación web interactiva diseñada para apoyar la revitalización, el aprendizaje y la difusión de la lengua comanche (*Nʉmʉ Tekwapʉ̲*). 
+**Marʉkwe** es una aplicación web interactiva diseñada para apoyar el aprendizaje, la difusión y el fortalecimiento de la lengua comanche (*Nʉmʉ Tekwapʉ̲*). 
 
-Perteneciente a la rama númica de la familia lingüística **yuto-azteca**, la lengua comanche posee una profunda riqueza cultural e histórica vinculada a los pueblos originarios de las Grandes Llanuras y el norte de México.
+Perteneciente a la rama númica de la familia lingüística **yuto-azteca**, la lengua comanche posee una profunda riqueza cultural e histórica vinculada a los pueblos originarios de las Grandes Llanuras y el norte de México. Actualmente, la lengua enfrenta una situación crítica de desplazamiento lingüístico, y esta herramienta busca ser una puerta de entrada para estudiantes, familias y comunidades interesadas en descubrir, aprender y fortalecer la lengua comanche.
 
 Esta plataforma ofrece una experiencia accesible, visual y lúdica que reúne 172 términos organizados por campos semánticos con ilustraciones de contorno táctil continuo y actividades pedagógicas interactivas.
 
@@ -35,11 +35,13 @@ Esta plataforma ofrece una experiencia accesible, visual y lúdica que reúne 17
 ## 👥 Coordinación y Créditos
 
 El proyecto está a cargo de:
-- **Jesús Osvaldo Rosales Vázquez (Garawigá)** — Estudiante, Escuela de Antropología e Historia del Norte de México (EAHNM).
-- **Mtro. Juan Pablo Cruz** — Escuela de Antropología e Historia del Norte de México (EAHNM).
+- **Jesús Osvaldo Rosales Vázquez (Garawigá)** — Estudiante de Antropología Social, Escuela de Antropología e Historia del Norte de México (EAHNM).
+- **Mtro. Juan Pablo Cruz** — Licenciatura de Lingüística Antropológica, Escuela de Antropología e Historia del Norte de México (EAHNM).
 
 Institución:
 - **Escuela de Antropología e Historia del Norte de México (EAHNM)**.
+
+📬 **Contacto**: ¿Te interesa colaborar o saber más del proyecto? [¡Contáctanos!](mailto:juanpik@gmail.com)
 
 ---
 
