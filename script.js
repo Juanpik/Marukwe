@@ -231,6 +231,21 @@
   const RARAMURI_ALPHABET = COMANCHE_ALPHABET; // Alias compatibilidad
 
   // ==========================================
+  function getComancheVariants(w) {
+    if (!w) return [];
+    if (typeof w === 'string') {
+      return w.split('/').map(v => v.trim()).filter(Boolean);
+    }
+    const text = (w.comanche || w.raramuri || '').trim();
+    if (!text) return [];
+    return text.split('/').map(v => v.trim()).filter(Boolean);
+  }
+
+  function cleanNativeText(text) {
+    if (!text) return '';
+    return String(text).replace(/[\u0331\u0332]/g, '').replace(/[’‘ʼʔ]/g, "'").trim();
+  }
+
   function getNative(w) {
     if (!w) return '';
     return (w.comanche || w.raramuri || '').trim();
@@ -238,8 +253,9 @@
 
   function getCleanNative(w) {
     if (!w) return '';
-    const text = (w.comanche || w.raramuri || '').split('/')[0].trim();
-    return text.replace(/[\u0331\u0332]/g, '').replace(/[’‘ʼʔ]/g, "'");
+    if (w.targetVariant) return cleanNativeText(w.targetVariant);
+    const variants = getComancheVariants(w);
+    return cleanNativeText(variants[0] || '');
   }
 
   // 3. ESTADO DE LA APLICACIÓN
@@ -1192,6 +1208,9 @@
 
     const randomIndex = Math.floor(Math.random() * g.pool.length);
     g.currentWord = g.pool[randomIndex];
+    const variants = getComancheVariants(g.currentWord);
+    g.targetVariant = variants.length > 1 ? variants[Math.floor(Math.random() * variants.length)] : (variants[0] || '');
+    g.currentVariants = variants;
     g.guessedLetters = new Set();
     g.lives = g.maxLives;
 
@@ -1255,7 +1274,7 @@
     if (!container || !State.guess.currentWord) return;
 
     container.innerHTML = '';
-    const word = getCleanNative(State.guess.currentWord).toLowerCase();
+    const word = cleanNativeText(State.guess.targetVariant || getCleanNative(State.guess.currentWord)).toLowerCase();
 
     for (let char of word) {
       const slot = document.createElement('div');
@@ -1292,7 +1311,8 @@
       btn.textContent = letter;
 
       if (State.guess.guessedLetters.has(letter)) {
-        const inWord = getCleanNative(State.guess.currentWord).toLowerCase().includes(letter);
+        const word = cleanNativeText(State.guess.targetVariant || getCleanNative(State.guess.currentWord)).toLowerCase();
+        const inWord = word.includes(letter);
         btn.classList.add(inWord ? 'correct' : 'incorrect');
         btn.disabled = true;
       }
@@ -1307,7 +1327,7 @@
     if (g.lives <= 0 || g.isWon || g.guessedLetters.has(letter) || !g.currentWord || isGuessAnimating) return;
 
     g.guessedLetters.add(letter);
-    const word = getCleanNative(g.currentWord).toLowerCase();
+    const word = cleanNativeText(g.targetVariant || getCleanNative(g.currentWord)).toLowerCase();
     const normLetter = letter.normalize('NFD').replace(/[̀-ͯ]/g, '');
     const normWord = word.normalize('NFD').replace(/[̀-ͯ]/g, '');
     const isHit = word.includes(letter) || normWord.includes(normLetter);
@@ -1358,10 +1378,11 @@
   }
 
   function checkAhorcadoWin() {
-    const word = getCleanNative(State.guess.currentWord).toLowerCase();
+    const target = State.guess.targetVariant || getCleanNative(State.guess.currentWord);
+    const word = cleanNativeText(target).toLowerCase();
     const isComplete = Array.from(word).every(char => {
       if (char === ' ') return true;
-      const normChar = char.normalize('NFD').replace(/[̀-ͯ]/g, '');
+      const normChar = char.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       return State.guess.guessedLetters.has(char) || State.guess.guessedLetters.has(normChar);
     });
 
@@ -1375,10 +1396,14 @@
         AudioPlayer.play(State.guess.currentWord.audio);
       }
 
+      const variants = State.guess.currentVariants || getComancheVariants(State.guess.currentWord);
+      const otherVariants = variants.filter(v => cleanNativeText(v).toLowerCase() !== cleanNativeText(target).toLowerCase());
+      const variantNote = otherVariants.length ? ` (también se dice: ${otherVariants.join(', ')})` : '';
+
       const feedback = document.getElementById('guess-feedback');
       if (feedback) {
         feedback.className = 'guess-feedback-box correct';
-        feedback.textContent = '¡Correcto! Has salvado la vasija y completado la palabra.';
+        feedback.textContent = `¡Correcto! Has salvado la vasija y completado "${target}"${variantNote}.`;
         feedback.classList.remove('hidden');
       }
 
@@ -1391,7 +1416,8 @@
     const gameOverScreen = document.getElementById('guess-game-over');
     if (gameOverScreen) {
       gameOverScreen.classList.remove('hidden');
-      document.getElementById('guess-reveal-word').textContent = getNative(State.guess.currentWord);
+      const variants = State.guess.currentVariants || getComancheVariants(State.guess.currentWord);
+      document.getElementById('guess-reveal-word').textContent = variants.join(' / ');
       document.getElementById('guess-final-score').textContent = State.guess.score;
     }
   }
@@ -1504,7 +1530,7 @@
         imgContainer.classList.remove('hidden');
         imgContainer.innerHTML = `<img src="${q.targetWord.image || 'images/placeholder.png'}" alt="" ${fallbackImgHandler}>`;
       }
-      statementEl.textContent = `Escribe en rarámuri: "${q.targetWord.spanish}"`;
+      statementEl.textContent = `Escribe en comanche: "${q.targetWord.spanish}"`;
     } else {
       textInputArea.classList.add('hidden');
       optionsGrid.classList.remove('hidden');
@@ -1515,7 +1541,7 @@
           imgContainer.classList.remove('hidden');
           imgContainer.innerHTML = `<img src="${q.targetWord.image || 'images/placeholder.png'}" alt="" ${fallbackImgHandler}>`;
         }
-        statementEl.textContent = '¿Cómo se dice esto en rarámuri?';
+        statementEl.textContent = '¿Cómo se dice esto en comanche?';
       } else if (q.type === 'MC_RaSp') {
         if (imgContainer) {
           imgContainer.classList.add('hidden');
@@ -1527,7 +1553,7 @@
           imgContainer.classList.add('hidden');
           imgContainer.innerHTML = '';
         }
-        statementEl.textContent = `¿Cómo se dice "${q.targetWord.spanish}" en rarámuri?`;
+        statementEl.textContent = `¿Cómo se dice "${q.targetWord.spanish}" en comanche?`;
       }
 
       q.options.forEach(opt => {
@@ -1577,20 +1603,39 @@
     input.disabled = true;
 
     const userAns = input.value.trim().toLowerCase();
-    const correctAns = (q.targetWord.comanche || q.targetWord.raramuri).trim().toLowerCase();
+    const variants = getComancheVariants(q.targetWord);
 
-    if (userAns === correctAns) {
+    function normRelaxed(str) {
+      return String(str || '').toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f\u0331\u0332]/g, '')
+        .replace(/[’‘ʼʔ']/g, '')
+        .replace(/ʉ/g, 'u')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    const normUser = normRelaxed(userAns);
+    const matchedVariant = variants.find(v => {
+      const vLower = v.toLowerCase().trim();
+      const vClean = cleanNativeText(v).toLowerCase().trim();
+      return userAns === vLower || userAns === vClean || normUser === normRelaxed(v);
+    });
+
+    if (matchedVariant) {
       State.quiz.score++;
       SoundFX.playSuccess();
       Confetti.burst();
       feedbackBar.className = 'feedback-answer-bar correct';
-      feedbackBar.textContent = '¡Exacto! Respuesta correcta.';
+      const otherVariants = variants.filter(v => normRelaxed(v) !== normRelaxed(matchedVariant));
+      const altNote = otherVariants.length ? ` (también se acepta: ${otherVariants.join(', ')})` : '';
+      feedbackBar.textContent = `¡Exacto! Respuesta correcta: ${matchedVariant}${altNote}.`;
       if (q.targetWord.audio) AudioPlayer.play(q.targetWord.audio);
     } else {
       SoundFX.playError();
       State.quiz.missedQuestions.push(q);
       feedbackBar.className = 'feedback-answer-bar error';
-      feedbackBar.textContent = `Respuesta correcta: ${q.targetWord.comanche || q.targetWord.raramuri}`;
+      feedbackBar.textContent = `Incorrecto. Respuesta correcta: ${variants.join(' / ')}`;
     }
 
     feedbackBar.classList.remove('hidden');
@@ -1977,8 +2022,8 @@
 
     if (audioBtn) {
       audioBtn.style.display = word.audio ? 'inline-flex' : 'none';
-      audioBtn.title = `Escuchar pronunciación de ${word.raramuri}`;
-      audioBtn.setAttribute('aria-label', `Escuchar pronunciación de ${word.raramuri}`);
+      audioBtn.title = `Escuchar pronunciación de ${word.comanche || word.raramuri}`;
+      audioBtn.setAttribute('aria-label', `Escuchar pronunciación de ${word.comanche || word.raramuri}`);
     }
 
     const total = f.deck.length;

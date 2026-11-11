@@ -11,10 +11,18 @@
       .replace(/\s/g, '');
   }
 
+  function getWordVariants(word) {
+    if (!word) return [];
+    const text = word.comanche || (word.comanche || word.raramuri) || '';
+    if (!text) return [];
+    return text.split('/').map(v => v.trim()).filter(Boolean);
+  }
+
   function getWordText(word) {
     if (!word) return '';
-    const text = word.comanche || (word.comanche || word.raramuri) || '';
-    return text.split('/')[0].trim();
+    if (word.variantText) return word.variantText;
+    const variants = getWordVariants(word);
+    return variants[0] || '';
   }
 
   function shuffle(items, random = Math.random) {
@@ -28,31 +36,50 @@
 
   function vocabulary(words) {
     const seen = new Set();
-    return words.filter(word => {
-      const text = getWordText(word);
-      if (!text || !word.spanish) return false;
-      const answer = normalize(text);
-      const length = Array.from(answer).length;
-      if (length < 3 || length > 14 || !/^[\p{L}']+$/u.test(answer) || seen.has(answer)) return false;
-      seen.add(answer);
-      return true;
+    const result = [];
+    words.forEach(word => {
+      if (!word || !word.spanish) return;
+      const variants = getWordVariants(word);
+      variants.forEach(variantText => {
+        const answer = normalize(variantText);
+        const length = Array.from(answer).length;
+        if (length < 3 || length > 14 || !/^[\p{L}']+$/u.test(answer) || seen.has(answer)) return;
+        seen.add(answer);
+        result.push({
+          ...word,
+          variantText: variantText,
+          allVariants: variants
+        });
+      });
     });
+    return result;
   }
 
   const key = (r, c) => `${r},${c}`;
   const blank = size => Array.from({ length: size }, () => Array(size).fill(null));
   function makeEntry(word, r, c, dr, dc) {
-    const letters = Array.from(normalize(getWordText(word)));
-    return { word, letters, cells: letters.map((_, i) => [r + i * dr, c + i * dc]), dr, dc };
+    const text = getWordText(word);
+    const letters = Array.from(normalize(text));
+    return { word, variantText: text, letters, cells: letters.map((_, i) => [r + i * dr, c + i * dc]), dr, dc };
   }
 
   function makeWordsearch(words, random = Math.random, count = 4) {
-    const chosen = shuffle(vocabulary(words), random).slice(0, count);
+    const pool = shuffle(vocabulary(words), random);
+    // Evitar que aparezcan dos variantes del mismo vocablo (mismo ID) en la misma sopa
+    const chosen = [];
+    const chosenIds = new Set();
+    for (const item of pool) {
+      if (!chosenIds.has(item.id)) {
+        chosenIds.add(item.id);
+        chosen.push(item);
+        if (chosen.length >= count) break;
+      }
+    }
     if (!chosen.length) return null;
     const size = Math.max(count >= 8 ? 10 : 8, ...chosen.map(w => Array.from(normalize(getWordText(w))).length));
     const board = blank(size);
     const entries = [];
-    chosen.sort((a, b) => normalize(b.raramuri).length - normalize(a.raramuri).length);
+    chosen.sort((a, b) => normalize(getWordText(b)).length - normalize(getWordText(a)).length);
     for (const word of chosen) {
       const candidates = [];
       for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
@@ -198,7 +225,15 @@
   }
   function wordCard(mode, entry, canReview = false) {
     const card = node('div', undefined, 'letter-word-card');
-    card.append(node('strong', (entry.word.comanche || entry.word.raramuri)), node('span', entry.word.spanish));
+    const wordText = entry.variantText || getWordText(entry.word);
+    const variants = getWordVariants(entry.word);
+    card.append(node('strong', wordText), node('span', entry.word.spanish));
+    if (variants.length > 1) {
+      const alt = variants.filter(v => normalize(v) !== normalize(wordText)).join(', ');
+      if (alt) {
+        card.append(node('small', `(también: ${alt})`, 'letter-variant-subtext'));
+      }
+    }
     if (canReview) {
       const saved = sessions[mode].assisted.has(entry.word.id);
       const save = button(saved ? 'Guardada para repasar' : 'Guardar para repasar', () => {
@@ -225,7 +260,7 @@
         </div>
         <section id="${mode}-setup" class="card-dialog letter-setup" aria-labelledby="${mode}-setup-title">
           <h3 id="${mode}-setup-title" class="dialog-title">${titles[mode]}</h3>
-          <p class="dialog-subtitle">${mode === 'wordsearch' ? 'Encuentra las palabras en rarámuri.' : 'Mira las pistas y completa las casillas.'}</p>
+          <p class="dialog-subtitle">${mode === 'wordsearch' ? 'Encuentra las palabras en comanche.' : 'Mira las pistas y completa las casillas.'}</p>
           <div class="input-selection-group">
             <label for="${mode}-category">Tema</label>
             <select id="${mode}-category" class="styled-dropdown"></select>
@@ -668,7 +703,16 @@
     picture.src = entry.word.image || '';
     el(mode, 'clue-title').textContent = mode === 'crossword'
       ? `${entry.number} ${entry.dr ? '↓' : '→'} ${entry.word.spanish}` : entry.word.spanish;
-    el(mode, 'word-help').textContent = '';
+    const variants = getWordVariants(entry.word);
+    if (variants.length > 1) {
+      if (mode === 'wordsearch') {
+        el(mode, 'word-help').textContent = `Palabra en la sopa: ${entry.variantText || getWordText(entry.word)}`;
+      } else if (mode === 'crossword') {
+        el(mode, 'word-help').textContent = `Variante de ${entry.letters.length} letras`;
+      }
+    } else {
+      el(mode, 'word-help').textContent = '';
+    }
     if (el(mode, 'hint')) el(mode, 'hint').disabled = state.solved.has(entry.word.id);
     el(mode, 'discovery').replaceChildren();
     paintBoard(mode);
@@ -821,7 +865,11 @@
       if (mode === 'crossword') focusCrosswordNext();
     }
     paintBoard(mode);
-    message(mode, `¡Correcto! ${(entry.word.comanche || entry.word.raramuri)} significa ${entry.word.spanish}.`);
+    const solvedWordText = entry.variantText || getWordText(entry.word);
+    const variants = getWordVariants(entry.word);
+    const otherVariants = variants.filter(v => normalize(v) !== normalize(solvedWordText));
+    const altNote = otherVariants.length ? ` (también se dice: ${otherVariants.join(', ')})` : '';
+    message(mode, `¡Correcto! ${solvedWordText} significa ${entry.word.spanish}.${altNote}`);
     if (entry.word.audio) services.playAudio(entry.word.audio);
     if (next < 0) {
       state.phase = 'complete';
