@@ -43,7 +43,7 @@ window.APP_DATA = {
       "comanche": "Puhu",
       "spanish": "Caballo doméstico",
       "category": "Animales",
-      "image": "images/caballo_nobg.png",
+      "image": "images/caballo_domestico_nobg.png",
       "audio": null,
       "notes": ""
     },
@@ -1528,7 +1528,7 @@ window.APP_DATA = {
       "comanche": "Kobe",
       "spanish": "Caballo salvaje",
       "category": "Animales",
-      "image": "images/caballo_nobg.png",
+      "image": "images/caballo_salvaje_nobg.png",
       "audio": null,
       "notes": ""
     },
